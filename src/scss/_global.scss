@@ -1,0 +1,44 @@
+/* Reset default box-sizing, margin and padding */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Variables definition */
+:root {
+	--clr-light: rgba(255, 255, 255, 0.95);
+	--clr-dark: rgba(0, 0, 0, 0.95);
+	--clr-accent: rgba(211, 116, 38, .95);
+	--clr-accent-hover: rgba(211, 116, 38, 0.6);
+	--fs-h1: 2.75rem;
+	--fs-h2: 2rem;
+	--fs-h3: 1.5rem;
+	--fs-body: 1rem;
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-bold: 700;
+	--fw-black: 800;
+	--box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+		0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+	--transition: all 0.5s ease;
+}
+
+/* Button styles */
+.btn {
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--clr-accent);
+	color: var(--clr-light);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: var(--transition);
+
+	&:hover,
+	&:active {
+		background-color: var(--clr-accent-hover);
+	}
+}

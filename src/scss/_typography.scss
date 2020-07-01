@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0.2em 0;
+}
+
+h1 {
+	font-size: var(--fs-h1);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+p {
+	font-size: var(--fs-body);
+}
