@@ -7,38 +7,54 @@
 	padding: 0;
 }
 
+/* Remove horizontal scrolling */
+body {
+	overflow-x: hidden;
+}
+
 /* Variables definition */
 :root {
-	--clr-light: rgba(255, 255, 255, 0.95);
-	--clr-dark: rgba(0, 0, 0, 0.95);
-	--clr-accent: rgba(211, 116, 38, .95);
-	--clr-accent-hover: rgba(211, 116, 38, 0.6);
+	--clr-light: #fefefe;
+	--clr-dark: #1d1d1d;
+	--clr-secondary: #c13b3b;
+	--clr-accent-light: #df8383;
+	--clr-accent-dark: #720e0e;
 	--fs-h1: 2.75rem;
 	--fs-h2: 2rem;
 	--fs-h3: 1.5rem;
 	--fs-body: 1rem;
+	--fs-sol-heading: 2.25rem;
+	--fs-sol-text: 1.5rem;
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-bold: 700;
 	--fw-black: 800;
 	--box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
 		0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-	--transition: all 0.5s ease;
+	--transition: all 0.3s ease;
 }
 
 /* Button styles */
 .btn {
 	padding: 0.5em 1em;
-	border: none;
-	border-radius: 5px;
-	background-color: var(--clr-accent);
-	color: var(--clr-light);
-	text-transform: uppercase;
+	border: 1px solid var(--clr-accent-light);
+	background-color: transparent;
+	color: var(--clr-accent-light);
 	cursor: pointer;
 	transition: var(--transition);
 
+	&-primary {
+		border-radius: 5px;
+		text-transform: uppercase;
+	}
+
+	&-circle {
+		border-radius: 50%;
+	}
+
 	&:hover,
 	&:active {
-		background-color: var(--clr-accent-hover);
+		border-color: var(--clr-secondary);
+		color: var(--clr-secondary);
 	}
 }

@@ -5,147 +5,100 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Mars Weather App</title>
 
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+			integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
 	<body>
-		<header>
-			<h1>Latest Weather at Elysium Planitia</h1>
-			<p>
-				InSight is taking daily weather measurements (temperature, wind,
-				pressure) on the surface of Mars at Elysium Planitia, a flat,
-				smooth plain near Mars’ equator.
-			</p>
-		</header>
+		<main class="main-content">
+			<div class="wrapper">
+				<header>
+					<h1>Latest Weather at Elysium Planitia</h1>
+					<p>
+						InSight is taking daily weather measurements
+						(temperature, wind, pressure) on the surface of Mars at
+						Elysium Planitia, a flat, smooth plain near Mars’
+						equator.
+					</p>
+				</header>
 
-		<main>
-			<!-- Current weather section -->
-			<section>
-				<h2>Current Weather</h2>
+				<section class="current-weather">
+					<h2>Current Weather</h2>
 
-				<article>
-					<h3>Sol 559</h3>
-					<p>September 24</p>
-				</article>
+					<article>
+						<h3 class="sol-heading">Sol 559</h3>
+						<p class="sol-text">September 24</p>
+					</article>
 
-				<article>
-					<h3>Temperature</h3>
-					<p>High: <span>27° C</span></p>
-					<p>Low: <span>-131° C</span></p>
-				</article>
-
-				<article>
-					<h3>Pressure</h3>
-					<p><span>858</span> mean Pascals</p>
-				</article>
-
-				<article>
-					<h3>Wind</h3>
-					<div>
-						<div></div>
-					</div>
-					<p>Average: <span>5.4 km/h</span></p>
-				</article>
-			</section>
-
-			<!-- Previous days section -->
-			<section>
-				<h2>Previous Days</h2>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
+					<article>
+						<h3>Temperature</h3>
 						<p>High: <span>27° C</span></p>
 						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
+					</article>
 
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-
-				<article>
-					<header>
-						<h3>Sol 558</h3>
-						<p>September 23</p>
-					</header>
-
-					<div>
-						<p>High: <span>27° C</span></p>
-						<p>Low: <span>-131° C</span></p>
-						<button class="btn">More info</button>
-					</div>
-				</article>
-			</section>
+					<article>
+						<h3>Wind</h3>
+						<div>
+							<div></div>
+						</div>
+						<p>Average: <span>5.4 km/h</span></p>
+					</article>
+				</section>
+			</div>
 		</main>
 
-		<footer>
+		<section class="previous-weather">
+			<div class="wrapper">
+				<h2>Previous Weather</h2>
+
+				<div class="previous-weather-content">
+					<div class="pagination">
+						<button class="btn btn-circle">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+					</div>
+
+					<article>
+						<header>
+							<h3>Sol 557</h3>
+							<p>September 22</p>
+						</header>
+
+						<div>
+							<p>High: <span>27° C</span></p>
+							<p>Low: <span>-131° C</span></p>
+							<button class="btn btn-primary">More info</button>
+						</div>
+					</article>
+
+					<article>
+						<header>
+							<h3>Sol 558</h3>
+							<p>September 23</p>
+						</header>
+
+						<div>
+							<p>High: <span>27° C</span></p>
+							<p>Low: <span>-131° C</span></p>
+							<button class="btn btn-primary">More info</button>
+						</div>
+					</article>
+
+					<div class="pagination">
+						<button class="btn btn-circle">
+							<i class="fas fa-chevron-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
 			<p>
 				&copy; DevHuesitos 2020. Data provided by NASA's InSight Mars
 				lander.

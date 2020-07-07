@@ -11,7 +11,7 @@ h1,
 h2,
 h3,
 p {
-	margin: 0.2em 0;
+	text-align: center;
 }
 
 h1 {
@@ -28,6 +28,14 @@ h3 {
 	letter-spacing: 2px;
 }
 
+.sol-heading {
+	font-size: var(--fs-sol-heading);
+}
+
 p {
 	font-size: var(--fs-body);
+}
+
+.sol-text {
+	font-size: var(--fs-sol-text);
 }

@@ -1,0 +1,54 @@
+/* Main content styles */
+.main-content {
+	width: 100vw;
+	min-height: 80vh;
+	background-image: url('../assets/red_planet_bg.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Wrapper definition */
+.wrapper {
+	width: 90%;
+	max-width: 1140px;
+	height: 100%;
+	margin: auto;
+}
+
+.current-weather {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	.current-weather {
+		grid-template-columns: repeat(3, 1fr);
+
+		& h2 {
+			grid-column: 1/-1;
+		}
+	}
+}
+
+.previous-weather {
+	padding: 3em 0;
+}
+
+.previous-weather-content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer {
+	padding: 1em 0;
+	background-color: var(--clr-accent-dark);
+}
