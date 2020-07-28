@@ -7,54 +7,33 @@
 	padding: 0;
 }
 
-/* Remove horizontal scrolling */
+html,
 body {
-	overflow-x: hidden;
+	max-width: 100%;
 }
 
 /* Variables definition */
 :root {
-	--clr-light: #fefefe;
-	--clr-dark: #1d1d1d;
-	--clr-secondary: #c13b3b;
-	--clr-accent-light: #df8383;
-	--clr-accent-dark: #720e0e;
-	--fs-h1: 2.75rem;
-	--fs-h2: 2rem;
+	--clr-light: rgb(250, 250, 250);
+	--clr-dark: rgb(29, 29, 29);
+	--clr-secondary: rgb(193, 59, 59);
+	--clr-accent-light: rgb(223, 131, 131);
+	--clr-accent-dark: rgb(114, 14, 14);
+	--clr-dark-bg: rgba(0, 0, 0, 0.6);
+	--clr-light-bg: rgb(240, 240, 240);
+	--clr-compass: rgba(255, 255, 255, 0.3);
+	--fs-h1: 2rem;
+	--fs-h2: 1.5rem;
 	--fs-h3: 1.5rem;
+	--fs-h4: 1.25rem;
 	--fs-body: 1rem;
-	--fs-sol-heading: 2.25rem;
-	--fs-sol-text: 1.5rem;
+	--fs-sol: 2rem;
+	--fs-small: 0.75rem;
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-bold: 700;
 	--fw-black: 800;
 	--box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
 		0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-	--transition: all 0.3s ease;
-}
-
-/* Button styles */
-.btn {
-	padding: 0.5em 1em;
-	border: 1px solid var(--clr-accent-light);
-	background-color: transparent;
-	color: var(--clr-accent-light);
-	cursor: pointer;
-	transition: var(--transition);
-
-	&-primary {
-		border-radius: 5px;
-		text-transform: uppercase;
-	}
-
-	&-circle {
-		border-radius: 50%;
-	}
-
-	&:hover,
-	&:active {
-		border-color: var(--clr-secondary);
-		color: var(--clr-secondary);
-	}
+	--transition: all 0.4s ease;
 }

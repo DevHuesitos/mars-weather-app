@@ -2,16 +2,11 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	line-height: 1.6;
-	background-color: var(--clr-dark);
-	color: var(--clr-light);
-}
-
-h1,
-h2,
-h3,
-p {
+	font-size: var(--fs-body);
+	font-weight: var(--fw-regular);
 	text-align: center;
+	line-height: 1.5;
+	color: var(--clr-light);
 }
 
 h1 {
@@ -24,18 +19,21 @@ h2 {
 
 h3 {
 	font-size: var(--fs-h3);
+}
+
+h4 {
+	font-size: var(--fs-h4);
+}
+
+.current-weather__item > h2 {
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.25rem;
 }
 
 .sol-heading {
-	font-size: var(--fs-sol-heading);
+	font-size: var(--fs-sol);
 }
 
-p {
-	font-size: var(--fs-body);
-}
-
-.sol-text {
-	font-size: var(--fs-sol-text);
+section {
+	color: var(--clr-dark);
 }
