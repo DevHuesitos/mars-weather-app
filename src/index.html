@@ -18,28 +18,28 @@
 			</header>
 			<section class="current-weather">
 				<div>
-					<h2>Sol 594</h2>
-					<p>September 23th</p>
-					<p>Season: <span>Summer</span></p>
+					<h2>Sol <span data-current-sol></span></h2>
+					<p data-current-date></p>
+					<p>Season: <span data-current-season></span></p>
 				</div>
 				<div>
 					<h3>Temperature</h3>
-					<p>High: <span>-16.6</span> &deg;C</p>
-					<p>Low: <span>-91.8</span> &deg;C</p>
+					<p>High: <span data-current-temp-high></span> &deg;C</p>
+					<p>Low: <span data-current-temp-low></span> &deg;C</p>
 				</div>
 				<div>
 					<h3>Pressure</h3>
-					<p>High: <span>806.5</span> Pa</p>
-					<p>Low: <span>751.5</span> Pa</p>
+					<p>High: <span data-current-pres-high></span> Pa</p>
+					<p>Low: <span data-current-pres-low></span> Pa</p>
 				</div>
 				<div>
 					<h3>Wind</h3>
 					<h4>Average</h4>
-					<p><span>7.8</span> m/s</p>
+					<p><span data-current-wind-speed>7.8</span> m/s</p>
 					<h4>Direction</h4>
-					<p class="sr-only">North</p>
+					<p class="sr-only" data-current-wind-direction></p>
 					<div class="wind-compass">
-						<div></div>
+						<div data-current-wind-degrees></div>
 					</div>
 				</div>
 			</section>
@@ -150,5 +150,7 @@
 				lander public API.
 			</p>
 		</footer>
+
+		<script src="./js/app.js"></script>
 	</body>
 </html>
