@@ -1,0 +1,44 @@
+.wind-compass {
+	--size: 6rem;
+	width: var(--size);
+	height: var(--size);
+	margin: 0.75em auto;
+	border: 3px solid var(--clr-light);
+	background-color: var(--clr-compass);
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	box-shadow: var(--box-shadow);
+
+	& > div {
+		--direction: 45deg;
+		--size: 1rem;
+		width: var(--size);
+		height: calc(var(--size) * 3);
+		background-color: var(--clr-light);
+		clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+		transform: translateY(-50%) rotate(var(--direction));
+		transform-origin: bottom center;
+		transition: var(--transition);
+	}
+}
+
+.btn {
+	padding: 0.25em 0.5em;
+	margin: 0.75em 0;
+	border: 1px solid var(--clr-accent);
+	border-radius: 12px;
+	background-color: var(--clr-light);
+	color: var(--clr-accent);
+	font-size: var(--fs-small);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: var(--transition);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--clr-accent);
+		color: var(--clr-light);
+	}
+}

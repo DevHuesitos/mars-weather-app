@@ -1,33 +1,23 @@
-/* Reset default box-sizing, margin and padding */
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-html,
-body {
-	max-width: 100%;
-}
-
-/* Variables definition */
 :root {
 	--clr-light: rgb(250, 250, 250);
 	--clr-dark: rgb(29, 29, 29);
-	--clr-secondary: rgb(193, 59, 59);
-	--clr-accent-light: rgb(223, 131, 131);
-	--clr-accent-dark: rgb(114, 14, 14);
-	--clr-dark-bg: rgba(0, 0, 0, 0.6);
-	--clr-light-bg: rgb(240, 240, 240);
+	--clr-accent: rgb(193, 59, 59);
 	--clr-compass: rgba(255, 255, 255, 0.3);
+	--clr-dark-bg: rgba(0, 0, 0, 0.4);
+	--clr-light-bg: rgba(0, 0, 0, 0.03);
 	--fs-h1: 2rem;
 	--fs-h2: 1.5rem;
-	--fs-h3: 1.5rem;
-	--fs-h4: 1.25rem;
+	--fs-h3: 1.25rem;
+	--fs-h4: 1.15rem;
 	--fs-body: 1rem;
-	--fs-sol: 2rem;
 	--fs-small: 0.75rem;
 	--fw-light: 300;
 	--fw-regular: 400;
@@ -35,5 +25,15 @@ body {
 	--fw-black: 800;
 	--box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
 		0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-	--transition: all 0.4s ease;
+	--transition: all 0.25s ease-in-out;
+}
+
+.sr-only:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }

@@ -1,11 +1,14 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
+/* Set global font and properties */
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: var(--fs-body);
 	font-weight: var(--fw-regular);
-	text-align: center;
 	line-height: 1.5;
+	text-align: center;
+	background-color: var(--clr-dark);
 	color: var(--clr-light);
 }
 
@@ -25,15 +28,28 @@ h4 {
 	font-size: var(--fs-h4);
 }
 
-.current-weather__item > h2 {
+p {
+	font-size: var(--fs-body);
+}
+
+h2,
+h3 {
 	text-transform: uppercase;
-	letter-spacing: 0.25rem;
+	padding-bottom: 0.25em;
+	margin-bottom: 0.25em;
+	border-bottom: 1px solid var(--clr-accent);
 }
 
-.sol-heading {
-	font-size: var(--fs-sol);
-}
+a {
+	transition: var(--transition);
 
-section {
-	color: var(--clr-dark);
+	&:link,
+	&:visited {
+		color: var(--clr-accent);
+	}
+
+	&:hover,
+	&:active {
+		color: var(--clr-light);
+	}
 }
