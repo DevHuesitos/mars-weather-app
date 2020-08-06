@@ -4,17 +4,14 @@ const API_URL = `https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedty
 const currentSolElement = document.querySelector('[data-current-sol]');
 const currentDateElement = document.querySelector('[data-current-date]');
 const currentSeasonElement = document.querySelector('[data-current-season]');
-
 const currentTempHighElement = document.querySelector(
 	'[data-current-temp-high]'
 );
 const currentTempLowElement = document.querySelector('[data-current-temp-low]');
-
 const currentPresHighElement = document.querySelector(
 	'[data-current-pres-high]'
 );
 const currentPresLowElement = document.querySelector('[data-current-pres-low]');
-
 const currentWindSpeedElement = document.querySelector(
 	'[data-current-wind-speed]'
 );
@@ -25,11 +22,17 @@ const currentWindDegreesElement = document.querySelector(
 	'[data-current-wind-degrees]'
 );
 
+const previousDaysContainer = document.querySelector('[data-previous-days]');
+const previousDaysTemplate = document.querySelector(
+	'[data-previous-days-template]'
+);
+
 let selectedSolIndex;
 
 getWeather().then((sols) => {
 	selectedSolIndex = sols.length - 1;
 	displaySelectedSol(sols);
+	displayPreviousDays(sols);
 });
 
 function getWeather() {
@@ -56,7 +59,6 @@ function getWeather() {
 
 function displaySelectedSol(sols) {
 	const selectedSol = sols[selectedSolIndex];
-	console.log(selectedSol);
 
 	currentSolElement.innerText = selectedSol.sol;
 	currentDateElement.innerText = displayDate(selectedSol.date);
@@ -73,6 +75,36 @@ function displaySelectedSol(sols) {
 		'--direction',
 		`${selectedSol.windDegrees}deg`
 	);
+}
+
+function displayPreviousDays(sols) {
+	previousDaysContainer.innerHTML = '';
+
+	sols.forEach((solData, index) => {
+		const solContainer = previousDaysTemplate.content.cloneNode(true);
+		solContainer.querySelector('[data-previous-sol]').innerText =
+			solData.sol;
+		solContainer.querySelector(
+			'[data-previous-date]'
+		).innerText = displayDate(solData.date);
+		solContainer.querySelector(
+			'[data-previous-temp-high]'
+		).innerText = displayRoundedData(solData.maxTemp);
+		solContainer.querySelector(
+			'[data-previous-temp-low]'
+		).innerText = displayRoundedData(solData.minTemp);
+		solContainer
+			.querySelector('[data-more-info]')
+			.addEventListener('click', () => {
+				selectedSolIndex = index;
+				displaySelectedSol(sols);
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth',
+				});
+			});
+		previousDaysContainer.appendChild(solContainer);
+	});
 }
 
 function displayDate(date) {

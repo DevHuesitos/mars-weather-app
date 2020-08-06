@@ -40,6 +40,10 @@ h3 {
 	border-bottom: 1px solid var(--clr-accent);
 }
 
+.current-season {
+	text-transform: capitalize;
+}
+
 a {
 	transition: var(--transition);
 

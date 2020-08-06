@@ -20,7 +20,10 @@
 				<div>
 					<h2>Sol <span data-current-sol></span></h2>
 					<p data-current-date></p>
-					<p>Season: <span data-current-season></span></p>
+					<p>
+						Season:
+						<span class="current-season" data-current-season></span>
+					</p>
 				</div>
 				<div>
 					<h3>Temperature</h3>
@@ -49,79 +52,21 @@
 			<h2>Previous Days</h2>
 
 			<div class="previous-weather">
-				<div class="previous-weather__days">
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-
-					<article class="previous-weather__item">
-						<h4>Sol <span>594</span></h4>
-						<p>September 23th</p>
-						<p>High: <span>-16.6&deg; C</span></p>
-						<p>Low: <span>-91.8&deg; C</span></p>
-						<button class="btn btn-primary">
-							More info
-						</button>
-					</article>
-				</div>
+				<div class="previous-weather__days" data-previous-days></div>
 			</div>
 		</section>
+
+		<template data-previous-days-template>
+			<article class="previous-weather__item">
+				<h4>Sol <span data-previous-sol></span></h4>
+				<p data-previous-date></p>
+				<p>High: <span data-previous-temp-high></span>&deg; C</p>
+				<p>Low: <span data-previous-temp-low></span>&deg; C</p>
+				<button class="btn" data-more-info>
+					More info
+				</button>
+			</article>
+		</template>
 
 		<section class="flex-container flex-container--pad-y">
 			<h2>Studying the 'Inner Space' of Mars</h2>
