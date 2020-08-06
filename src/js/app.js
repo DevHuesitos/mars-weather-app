@@ -105,6 +105,8 @@ function displayPreviousDays(sols) {
 			});
 		previousDaysContainer.appendChild(solContainer);
 	});
+	let previousDaysContainerWidth = previousDaysContainer.offsetWidth;
+	previousDaysContainer.scrollTo({ left: previousDaysContainerWidth });
 }
 
 function displayDate(date) {

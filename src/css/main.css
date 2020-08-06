@@ -292,4 +292,5 @@ footer {
 .btn:hover, .btn:focus, .btn:active {
   background-color: var(--clr-accent);
   color: var(--clr-light);
+  outline: none;
 }
